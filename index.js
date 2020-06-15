@@ -105,10 +105,10 @@ module.exports = function (config) {
       console.log('The article id is : '+articleId+' and the alertBody is ');
       console.log(JSON.stringify(alertBody));
 
-      // makeRequest('POST', '/articles/' + articleId + '/notifications', {
-      //   formData: opts.alertBody
-      // }, cb);
-      makeRequest('POST', '/articles/' + articleId + '/notifications', alertBody, cb);
+      makeRequest('POST', '/articles/' + articleId + '/notifications', {
+        formData: opts.alertBody
+      }, cb);
+      //makeRequest('POST', '/articles/' + articleId + '/notifications', alertBody, cb);
     }
   };
 };
