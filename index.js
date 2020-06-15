@@ -102,21 +102,10 @@ module.exports = function (config) {
       assert(Object(opts.alertBody) === opts.alertBody, 'opts.alertBody required');
       var articleId = opts.articleId;
       var sendAlert = opts.alertBody;
-      // var fd = [{
-      //   value:JSON.stringify(alertBody),
-      //   options:{contentType: 'application/json' } 
-      // }];
-      var fd = {
-        "data": {
-          "alertBody":sendAlert
-        }
-      };
 
       makeRequest('POST', '/articles/' + articleId + '/notifications', {
-        //formData: opts.alertBody
-        formData: fd
+        formData: sendAlert
       }, cb);
-      //makeRequest('POST', '/articles/' + articleId + '/notifications', alertBody, cb);
     }
   };
 };
