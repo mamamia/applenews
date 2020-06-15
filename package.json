@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/micnews/apple-news.git"
+    "url": "git+https://github.com/mamamia/applenews.git"
   },
   "author": "mic.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/micnews/apple-news/issues"
+    "url": "https://github.com/mamamia/applenews/issues"
   },
-  "homepage": "https://github.com/micnews/apple-news#readme",
+  "homepage": "https://github.com/mamamia/applenews#readme",
   "devDependencies": {
     "async": "^2.5.0",
     "eslint": "^4.12.1",
