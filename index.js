@@ -107,8 +107,8 @@ module.exports = function (config) {
       //   options:{contentType: 'application/json' } 
       // }];
       var fd = {
-        data: {
-          alertBody:sendAlert
+        "data": {
+          "alertBody":sendAlert
         }
       };
 
