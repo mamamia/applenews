@@ -102,11 +102,14 @@ module.exports = function (config) {
       assert(Object(opts.alertBody) === opts.alertBody, 'opts.alertBody required');
       var articleId = opts.articleId;
       var alertBody = opts.alertBody;
-      console.log('The article id is : '+articleId+' and the alertBody is ');
-      console.log(JSON.stringify(alertBody));
+      var fd = [{
+        value:JSON.stringify(alertBody),
+        options:{contentType: 'application/json' } 
+      }];
 
       makeRequest('POST', '/articles/' + articleId + '/notifications', {
-        formData: opts.alertBody
+        //formData: opts.alertBody
+        formData: fd
       }, cb);
       //makeRequest('POST', '/articles/' + articleId + '/notifications', alertBody, cb);
     }
